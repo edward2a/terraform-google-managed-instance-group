@@ -86,7 +86,7 @@ resource "google_compute_instance_group_manager" "default" {
 
   update_strategy = "${var.update_strategy}"
 
-  rolling_update_policy = ["${var.rolling_update_policy}"]
+  update_policy = ["${var.update_policy}"]
 
   target_pools = ["${var.target_pools}"]
 
