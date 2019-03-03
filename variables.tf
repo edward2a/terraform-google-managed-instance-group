@@ -105,8 +105,13 @@ variable wait_for_instances {
 
 variable update_policy {
   description = "The update policy for template changes"
-  type        = "list"
-  default     = []
+  type        = "map"
+  default     = {
+    type = "PROACTIVE"
+    minimal_action = "REPLACE"
+    max_surge_fixed       = 1
+    max_unavailable_fixed = 0
+  }
 }
 
 variable service_port {
