@@ -183,12 +183,6 @@ variable distribution_policy_zones {
   default     = []
 }
 
-variable ssh_source_ranges {
-  description = "Network ranges to allow SSH from"
-  type        = "list"
-  default     = ["0.0.0.0/0"]
-}
-
 variable disk_auto_delete {
   description = "Whether or not the disk should be auto-deleted."
   default     = true
@@ -297,9 +291,4 @@ variable hc_port {
 variable hc_path {
   description = "Health check, the http path to check."
   default     = "/"
-}
-
-variable ssh_fw_rule {
-  description = "Whether or not the SSH Firewall Rule should be created"
-  default     = true
 }
